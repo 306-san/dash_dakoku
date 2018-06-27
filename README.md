@@ -1,7 +1,12 @@
 # dash_dakoku
 AmazonDashで打刻するプログラム  
-端末から通知を飛ばす関係上、macOSでしか動きません  
-仕組みとしてはボタンを押したらslackにslashコマンドを実行しようとします  
+仕組みとしてはボタンを押したらslackにslashコマンドを実行しようとします 
+
+## 注意点
+ - DashボタンとPCは同一のネットワークでしか動きません
+   - ちなみにDashボタンは2.4GHzしか対応してません
+ - パケットキャプチャーの関係上、macのDockerでも動きません。ネイティブで実行してください
+ - 現状macのwifiでパケット見るようにしております。変えたい場合はコードから書き換えてください
 ## 前処理
 必要なものを書き換え
 - [slackのuser_name](https://github.com/306-san/dash_dakoku/blob/8ee58164bb2f8753adff625eeb08d4a4860700b9/recive.rb#L5)
